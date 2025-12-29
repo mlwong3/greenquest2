@@ -80,8 +80,9 @@
         <!-- ================= 1. 主頁界面 (Home) ================= -->
         <div id="view-home" class="view-section flex flex-col h-full">
             <!-- 頂部標題 -->
-            <header class="pt-6 pb-2 text-center">
+            <header class="pt-6 pb-2 flex justify-between items-center">
                 <h1 class="text-2xl font-bold text-white drop-shadow-md tracking-wider">🌿 植物紀錄</h1>
+                <button id="switch-scene-btn" class="bg-white/70 backdrop-blur-sm rounded-full px-3 py-2 flex items-center shadow hover:bg-white/90 transition-colors"><span class="text-2xl">🏠</span></button>
             </header>
 
             <!-- 中心寵物區 -->
@@ -100,7 +101,6 @@
 
             <!-- 主頁裝飾元素 -->
             <div class="h-[20%] w-full bg-gradient-to-t from-emerald-800/20 to-transparent absolute bottom-20 pointer-events-none"></div>
-            <div id="background-overlay" class="absolute inset-0 cursor-pointer z-5" onclick="showSwitchSceneModal('index.html')"></div>
         </div>
 
         <!-- ================= 2. 資料界面 (Data) ================= -->
@@ -580,6 +580,9 @@
                 </div>
             `);
         }
+
+        // Add event listener for switch scene button
+        document.getElementById('switch-scene-btn').addEventListener('click', () => showSwitchSceneModal('index.html'));
     </script>
 </body>
 </html>

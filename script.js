@@ -169,6 +169,18 @@ modalContent.classList.add('scale-95', 'opacity-0');
 setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
+function showSwitchSceneModal(targetUrl) {
+showModal(`
+<div class="text-6xl mb-4">🌿</div>
+<h3 class="text-2xl font-bold mb-2">是否切換場景？</h3>
+<p class="text-gray-600 mb-6">確定要切換到另一個場景嗎？</p>
+<div class="flex gap-4 justify-center">
+<button class="modal-close-btn btn bg-gray-500 text-white font-bold py-2 px-6 rounded-full" onclick="hideModal()">否</button>
+<button class="btn bg-emerald-500 text-white font-bold py-2 px-6 rounded-full" onclick="window.location.href='${targetUrl}'">是</button>
+</div>
+`);
+}
+
 function navigateTo(screenName) {
 Object.values(screens).forEach(s => s && s.classList.add('hidden'));
 if (screens[screenName]) screens[screenName].classList.remove('hidden');

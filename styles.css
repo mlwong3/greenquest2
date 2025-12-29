@@ -1,0 +1,19 @@
+body { font-family: 'Noto Sans TC', sans-serif; touch-action: manipulation; }
+.app-bg {background-image: url('Background.png'); background-size: cover;background-position: center;background-repeat: no-repeat; position: relative;overflow: hidden;}
+.main-content { z-index: 1; position: relative; }
+.progress-bar-fill { transition: width 0.5s ease-in-out; }
+.btn { transition: all 0.2s ease-in-out; }
+.btn:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.1); }
+.btn:disabled { cursor: not-allowed; opacity: 0.6; }
+.modal-backdrop { transition: opacity 0.3s ease; opacity: 0; }
+.modal-backdrop.opacity-100 { opacity: 1; }
+.modal-content { transition: transform 0.3s ease, opacity 0.3s ease; }
+input[type="file"] { display: none; }
+.nav-item.active { color: #16a34a; }
+.achievement-unlocked { background-color: #d1fae5; border-color: #10b981; }
+.task-completed { text-decoration: line-through; color: #6b7280; }
+.pet-decoration { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 100px; height: auto; pointer-events: none; z-index: 10; }
+.pokedex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 1rem; }
+.camera-view { object-fit: cover; width: 100%; height: 100%; }
+.pet-choice-card { border: 4px solid transparent; transition: border-color 0.2s ease-in-out; }
+.pet-choice-card.selected { border-color: #10b981; /* emerald-600 */ }
